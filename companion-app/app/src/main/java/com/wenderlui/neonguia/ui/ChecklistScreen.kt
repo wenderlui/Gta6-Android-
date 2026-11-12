@@ -90,6 +90,8 @@ private fun ChecklistCard(
             modifier = Modifier.fillMaxWidth().height(6.dp).clip(RoundedCornerShape(3.dp)),
             color = Neon.Pink,
             trackColor = Neon.SurfaceHigh,
+            drawStopIndicator = {},
+            gapSize = 0.dp,
         )
         if (open) {
             list.items.forEach { item ->

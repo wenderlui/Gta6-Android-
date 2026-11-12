@@ -153,6 +153,8 @@ private fun ProgressSummary(state: UiState) {
             modifier = Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(4.dp)),
             color = Neon.Cyan,
             trackColor = Neon.SurfaceHigh,
+            drawStopIndicator = {},
+            gapSize = 0.dp,
         )
         Spacer(Modifier.height(6.dp))
         Text("$done de ${all.size} itens concluídos", color = Neon.Muted, style = MaterialTheme.typography.bodySmall)
