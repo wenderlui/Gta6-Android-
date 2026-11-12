@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "launchDate": "2026-11-19",
+  "launchTitle": "Contagem para o grande lançamento",
+  "news": [
+    {
+      "id": "n1",
+      "date": "12/11/2026",
+      "title": "Bem-vindo ao NeonGuia",
+      "body": "Seu companheiro de bolso para o jogo de mundo aberto mais aguardado do ano. Acompanhe a contagem regressiva, organize seu progresso e marque seus pontos favoritos no mapa."
+    },
+    {
+      "id": "n2",
+      "date": "12/11/2026",
+      "title": "Conteúdo atualizado sem precisar atualizar o app",
+      "body": "Guias, códigos e listas de colecionáveis chegam automaticamente. Toque no botão de atualizar na tela inicial para buscar as novidades."
+    },
+    {
+      "id": "n3",
+      "date": "12/11/2026",
+      "title": "Prepare seu console",
+      "body": "Confira a lista 'Preparação para o lançamento' na aba Progresso: espaço livre, atualizações do sistema e pré-carregamento."
+    }
+  ],
+  "guides": [
+    {
+      "id": "g1",
+      "category": "Iniciante",
+      "title": "Primeiras horas: o que priorizar",
+      "body": "Siga as missões principais até liberar o mapa inteiro, guarde dinheiro em vez de gastar com roupas no começo e salve o jogo antes de missões longas. Explorar cedo ajuda a descobrir lojas, oficinas e esconderijos."
+    },
+    {
+      "id": "g2",
+      "category": "Iniciante",
+      "title": "Como evitar perder dinheiro",
+      "body": "Evite morrer ou ser preso logo depois de concluir um trabalho grande. Invista em propriedades que geram renda passiva assim que possível e compare preços antes de comprar veículos."
+    },
+    {
+      "id": "g3",
+      "category": "Direção",
+      "title": "Dicas de direção e fuga",
+      "body": "Use o freio de mão em curvas fechadas, prefira vielas e túneis para despistar perseguidores e troque de veículo fora da área de busca. Motos são ótimas para atalhos, carros pesados para bloqueios."
+    },
+    {
+      "id": "g4",
+      "category": "Combate",
+      "title": "Cobertura e mira",
+      "body": "Fique sempre atrás de cobertura, mire na cabeça para economizar munição e use a roda de armas para alternar rapidamente. Coletes e kits médicos valem cada centavo antes de missões difíceis."
+    },
+    {
+      "id": "g5",
+      "category": "Exploração",
+      "title": "Como usar o mapa do NeonGuia",
+      "body": "Na aba Mapa, toque em qualquer ponto para criar um marcador com nome e cor. Use para lembrar onde estão colecionáveis, lojas e pontos de encontro. Os marcadores ficam salvos só no seu aparelho."
+    },
+    {
+      "id": "g6",
+      "category": "Códigos",
+      "title": "Como inserir códigos",
+      "body": "Códigos costumam ser digitados com sequências de botões no controle ou pelo celular dentro do jogo. Eles podem desativar conquistas/troféus na sessão: salve antes de usar. A lista completa será publicada na aba Códigos após o lançamento."
+    }
+  ],
+  "codes": [],
+  "checklists": [
+    {
+      "id": "prep",
+      "title": "Preparação para o lançamento",
+      "items": [
+        { "id": "prep-1", "title": "Liberar espaço no console", "note": "Reserve bastante espaço livre para o jogo e atualizações." },
+        { "id": "prep-2", "title": "Atualizar o sistema do console" },
+        { "id": "prep-3", "title": "Ativar o pré-carregamento" },
+        { "id": "prep-4", "title": "Conferir assinatura online, se for jogar em grupo" },
+        { "id": "prep-5", "title": "Combinar a primeira sessão com os amigos" }
+      ]
+    },
+    {
+      "id": "start",
+      "title": "Primeiros passos",
+      "items": [
+        { "id": "start-1", "title": "Concluir o prólogo" },
+        { "id": "start-2", "title": "Desbloquear o primeiro esconderijo" },
+        { "id": "start-3", "title": "Comprar ou conseguir o primeiro carro próprio" },
+        { "id": "start-4", "title": "Personalizar o visual do personagem" },
+        { "id": "start-5", "title": "Visitar todas as lojas de armas da região inicial" },
+        { "id": "start-6", "title": "Juntar o primeiro grande valor em dinheiro" }
+      ]
+    },
+    {
+      "id": "explore",
+      "title": "Exploração",
+      "items": [
+        { "id": "explore-1", "title": "Visitar a praia principal ao pôr do sol" },
+        { "id": "explore-2", "title": "Atravessar a ponte para as ilhas" },
+        { "id": "explore-3", "title": "Explorar o pântano de barco" },
+        { "id": "explore-4", "title": "Pilotar uma aeronave" },
+        { "id": "explore-5", "title": "Encontrar um ponto alto com vista da cidade" }
+      ]
+    }
+  ]
+}
