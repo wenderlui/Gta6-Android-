@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone original: sol neon se pondo sobre o mar. 108dp, zona segura 66dp. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- sol -->
+    <path android:fillColor="#FFFF4FA3"
+        android:pathData="M54,30a20,20 0,0 1,20 20h-40a20,20 0,0 1,20 -20z" />
+    <!-- faixas do horizonte -->
+    <path android:fillColor="#FFFFB347" android:pathData="M32,54h44v3h-44z" />
+    <path android:fillColor="#FF2DE2E6" android:pathData="M35,60h38v3h-38z" />
+    <path android:fillColor="#FF2DE2E6" android:pathData="M40,66h28v3h-28z" />
+    <path android:fillColor="#FF2DE2E6" android:pathData="M46,72h16v3h-16z" />
+</vector>
