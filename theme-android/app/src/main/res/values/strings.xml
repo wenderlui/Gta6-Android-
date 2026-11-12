@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Neon Shore</string>
+    <string name="hero_title">NEON SHORE</string>
+    <string name="hero_subtitle">Ícones neon e wallpapers retrô para o seu Android</string>
+    <string name="apply_icons">Aplicar ícones</string>
+    <string name="section_wallpapers">Wallpapers</string>
+    <string name="section_icons">Ícones (%1$d)</string>
+    <string name="section_help">Como usar</string>
+    <string name="help_text">Os ícones funcionam em launchers que aceitam pacotes de ícones, como Nova, Lawnchair, Smart Launcher, Niagara e Action Launcher. Toque em \"Aplicar ícones\" e escolha o seu launcher.\n\nO launcher padrão da Samsung (One UI) e de algumas marcas não aceita pacotes de ícones de terceiros. Nesses aparelhos, instale um dos launchers acima ou use apenas os wallpapers.\n\nApps sem ícone próprio no pacote recebem automaticamente o fundo neon.</string>
+    <string name="choose_launcher">Escolha o seu launcher</string>
+    <string name="launcher_installed">Instalado</string>
+    <string name="launcher_get">Baixar na Play Store</string>
+    <string name="applied_manual">Abra as configurações do %1$s → Ícones → Pacote de ícones e escolha \"Neon Shore\".</string>
+    <string name="apply_failed">Não foi possível aplicar automaticamente. Selecione \"Neon Shore\" nas configurações de ícones do seu launcher.</string>
+    <string name="set_home">Tela inicial</string>
+    <string name="set_lock">Bloqueio</string>
+    <string name="set_both">Ambas</string>
+    <string name="wallpaper_applying">Aplicando wallpaper…</string>
+    <string name="wallpaper_done">Wallpaper aplicado!</string>
+    <string name="wallpaper_error">Não foi possível aplicar o wallpaper.</string>
+    <string name="privacy">Este app não coleta nenhum dado pessoal e funciona totalmente offline.</string>
+    <string name="disclaimer">Arte original. Não é afiliado nem endossado por nenhuma desenvolvedora de jogos.</string>
+</resources>
