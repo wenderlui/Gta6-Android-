@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cfg_background">Scene</string>
+    <string name="cfg_background_sunset">Sunset</string>
+    <string name="cfg_background_night">Night</string>
+
+    <string name="cfg_color">Color</string>
+    <string name="cfg_color_pink">Neon pink</string>
+    <string name="cfg_color_cyan">Cyan</string>
+    <string name="cfg_color_gold">Gold</string>
+    <string name="cfg_color_white">White</string>
+    <string name="cfg_color_green">Neon green</string>
+
+    <string name="cfg_seconds">Seconds ring</string>
+</resources>
