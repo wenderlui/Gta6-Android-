@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="night">#FF0E0622</color>
+    <color name="night_card">#FF1C0B38</color>
+    <color name="neon_pink">#FFFF2EA0</color>
+    <color name="neon_cyan">#FF22E6FF</color>
+    <color name="neon_orange">#FFFF963C</color>
+    <color name="text_primary">#FFFFF0FA</color>
+    <color name="text_secondary">#FFC9B6E0</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hero_subtitle">Neon icons and retro wallpapers for your Android</string>
+    <string name="apply_icons">Apply icons</string>
+    <string name="section_wallpapers">Wallpapers</string>
+    <string name="section_icons">Icons (%1$d)</string>
+    <string name="section_help">How to use</string>
+    <string name="help_text">The icons work with launchers that support icon packs, such as Nova, Lawnchair, Smart Launcher, Niagara and Action Launcher. Tap \"Apply icons\" and pick your launcher.\n\nThe stock Samsung (One UI) launcher and some other stock launchers do not support third-party icon packs. On those phones, install one of the launchers above or just use the wallpapers.\n\nApps without a dedicated icon get the neon backdrop automatically.</string>
+    <string name="choose_launcher">Choose your launcher</string>
+    <string name="launcher_installed">Installed</string>
+    <string name="launcher_get">Get it on Play Store</string>
+    <string name="applied_manual">Open %1$s settings → Icons → Icon pack and choose \"Neon Shore\".</string>
+    <string name="apply_failed">Could not apply automatically. Choose \"Neon Shore\" in your launcher\'s icon settings.</string>
+    <string name="set_home">Home screen</string>
+    <string name="set_lock">Lock screen</string>
+    <string name="set_both">Both</string>
+    <string name="wallpaper_applying">Applying wallpaper…</string>
+    <string name="wallpaper_done">Wallpaper applied!</string>
+    <string name="wallpaper_error">Could not apply the wallpaper.</string>
+    <string name="privacy">This app collects no personal data and works fully offline.</string>
+    <string name="disclaimer">Original artwork. Not affiliated with or endorsed by any game developer.</string>
+</resources>
