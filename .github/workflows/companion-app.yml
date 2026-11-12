@@ -49,3 +49,35 @@ jobs:
         with:
           name: neonguia-debug-apk
           path: companion-app/app/build/outputs/apk/debug/*.apk
+
+  screenshots:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: neonguia-debug-apk
+          path: apk
+      - name: Habilitar KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Capturar telas no emulador
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          script: |
+            adb install -r apk/*.apk
+            mkdir -p shots
+            adb shell settings put system time_12_24 24
+            adb shell cmd uimode night yes
+            for t in 0 1 2 3 4; do adb shell am start -S -W -n com.wenderlui.neonguia/.MainActivity --ei tab $t; sleep 6; adb exec-out screencap -p > shots/tela-$t.png; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: neonguia-screenshots
+          path: shots/*.png

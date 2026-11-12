@@ -51,14 +51,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent { NeonTheme { App(vm) } }
+        // Aba inicial opcional (usada também para gerar as capturas de tela da loja).
+        val startTab = intent.getIntExtra("tab", 0).coerceIn(0, tabs.lastIndex)
+        setContent { NeonTheme { App(vm, startTab) } }
     }
 }
 
 @Composable
-private fun App(vm: AppViewModel) {
+private fun App(vm: AppViewModel, startTab: Int) {
     val state by vm.state.collectAsStateWithLifecycle()
-    var tab by rememberSaveable { mutableIntStateOf(0) }
+    var tab by rememberSaveable { mutableIntStateOf(startTab) }
 
     Scaffold(
         containerColor = Neon.Bg,

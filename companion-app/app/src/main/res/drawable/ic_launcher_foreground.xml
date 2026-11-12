@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Ícone original: sol neon se pondo sobre o mar, com palmeira estilizada. 108dp, zona segura 66dp. -->
+<!-- Ícone original: sol neon se pondo sobre o mar. 108dp, zona segura 66dp. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
@@ -11,9 +11,4 @@
     <path android:fillColor="#FF2DE2E6" android:pathData="M35,60h38v3h-38z" />
     <path android:fillColor="#FF2DE2E6" android:pathData="M40,66h28v3h-28z" />
     <path android:fillColor="#FF2DE2E6" android:pathData="M46,72h16v3h-16z" />
-    <!-- palmeira -->
-    <path android:fillColor="#FF1A0F2E"
-        android:pathData="M64,50 L66,34 L67.5,34 L66,50z" />
-    <path android:fillColor="#FF1A0F2E"
-        android:pathData="M66.5,34 C60,30 55,32 52,36 C57,33 62,33 66.5,35z M66.5,34 C72,29 78,31 80,35 C75,32 71,33 66.5,35z M66.5,34 C64,27 58,26 55,28 C60,28 63,30 66.5,35z" />
 </vector>
