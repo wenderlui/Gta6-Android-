@@ -42,9 +42,18 @@ android {
     }
 
     buildTypes {
+        // A Watch Face Format package must not contain any dex file. Running R8 with
+        // no sources strips the empty dex AGP would otherwise package.
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
             if (hasReleaseSigning) signingConfig = signingConfigs.getByName("release")
+        }
+        debug {
+            isMinifyEnabled = true
+            isShrinkResources = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
         }
     }
 

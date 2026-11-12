@@ -34,7 +34,6 @@ jobs:
         run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
 
       - name: Validate watchface.xml (Watch Face Format v1)
-        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -67,7 +66,9 @@ jobs:
         run: |
           AAB=app/build/outputs/bundle/release/app-release.aab
           unzip -l "$AAB" | grep -E "base/res/raw/watchface.xml|base/manifest/AndroidManifest.xml"
-          ! unzip -l "$AAB" | grep -q "\.dex"
+          if unzip -l "$AAB" | grep -q "\.dex"; then echo "::error::bundle contains dex"; exit 1; fi
+          APK=app/build/outputs/apk/debug/app-debug.apk
+          if unzip -l "$APK" | grep -q "\.dex"; then echo "::error::debug APK contains dex"; exit 1; fi
 
       - uses: actions/upload-artifact@v5
         with:

@@ -130,101 +130,114 @@
           <Font family="orbitron_bold" size="96" color="[CONFIGURATION.themeColor.0]" />
         </TimeText>
       </DigitalClock>
-
-      <ComplicationSlot slotId="0" x="114" y="290" width="92" height="92"
-          supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
-        <BoundingOval x="0" y="0" width="92" height="92" />
-        <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
-        <Complication type="SHORT_TEXT">
-          <PartDraw x="0" y="0" width="92" height="92">
-            <Ellipse x="1" y="1" width="90" height="90">
-              <Fill color="#AA050010" />
-              <Stroke color="[CONFIGURATION.themeColor.1]" thickness="2" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="44" width="84" height="28">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Complication>
-        <Complication type="RANGED_VALUE">
-          <PartDraw x="0" y="0" width="92" height="92">
-            <Ellipse x="1" y="1" width="90" height="90">
-              <Fill color="#AA050010" />
-              <Stroke color="#40FFFFFF" thickness="2" />
-            </Ellipse>
-            <Arc centerX="46" centerY="46" width="88" height="88" startAngle="0" endAngle="0">
-              <Transform target="endAngle"
-                  value="clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]), 0, 1) * 360" />
-              <Stroke color="[CONFIGURATION.themeColor.1]" thickness="4" cap="ROUND" />
-            </Arc>
-          </PartDraw>
-          <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="44" width="84" height="28">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Complication>
-      </ComplicationSlot>
-
-      <ComplicationSlot slotId="1" x="244" y="290" width="92" height="92"
-          supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
-        <BoundingOval x="0" y="0" width="92" height="92" />
-        <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
-        <Complication type="SHORT_TEXT">
-          <PartDraw x="0" y="0" width="92" height="92">
-            <Ellipse x="1" y="1" width="90" height="90">
-              <Fill color="#AA050010" />
-              <Stroke color="[CONFIGURATION.themeColor.1]" thickness="2" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="44" width="84" height="28">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Complication>
-        <Complication type="RANGED_VALUE">
-          <PartDraw x="0" y="0" width="92" height="92">
-            <Ellipse x="1" y="1" width="90" height="90">
-              <Fill color="#AA050010" />
-              <Stroke color="#40FFFFFF" thickness="2" />
-            </Ellipse>
-            <Arc centerX="46" centerY="46" width="88" height="88" startAngle="0" endAngle="0">
-              <Transform target="endAngle"
-                  value="clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]), 0, 1) * 360" />
-              <Stroke color="[CONFIGURATION.themeColor.1]" thickness="4" cap="ROUND" />
-            </Arc>
-          </PartDraw>
-          <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="44" width="84" height="28">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Complication>
-      </ComplicationSlot>
     </Group>
+
+    <!-- ===== Complications (hidden in ambient) ===== -->
+    <ComplicationSlot slotId="0" x="114" y="290" width="92" height="92"
+        supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="92" height="92" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <Complication type="SHORT_TEXT">
+        <Group name="c" x="0" y="0" width="92" height="92">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+        <PartDraw x="0" y="0" width="92" height="92">
+          <Ellipse x="1" y="1" width="90" height="90">
+            <Fill color="#AA050010" />
+            <Stroke color="[CONFIGURATION.themeColor.1]" thickness="2" />
+          </Ellipse>
+        </PartDraw>
+        <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+        <PartText x="4" y="44" width="84" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+            </Font>
+          </Text>
+        </PartText>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="c" x="0" y="0" width="92" height="92">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+        <PartDraw x="0" y="0" width="92" height="92">
+          <Ellipse x="1" y="1" width="90" height="90">
+            <Fill color="#AA050010" />
+            <Stroke color="#40FFFFFF" thickness="2" />
+          </Ellipse>
+          <Arc centerX="46" centerY="46" width="88" height="88" startAngle="0" endAngle="0">
+            <Transform target="endAngle"
+                value="clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]), 0, 1) * 360" />
+            <Stroke color="[CONFIGURATION.themeColor.1]" thickness="4" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+        <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+        <PartText x="4" y="44" width="84" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+            </Font>
+          </Text>
+        </PartText>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+
+    <ComplicationSlot slotId="1" x="244" y="290" width="92" height="92"
+        supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY" isCustomizable="TRUE">
+      <BoundingOval x="0" y="0" width="92" height="92" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <Complication type="SHORT_TEXT">
+        <Group name="c" x="0" y="0" width="92" height="92">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+        <PartDraw x="0" y="0" width="92" height="92">
+          <Ellipse x="1" y="1" width="90" height="90">
+            <Fill color="#AA050010" />
+            <Stroke color="[CONFIGURATION.themeColor.1]" thickness="2" />
+          </Ellipse>
+        </PartDraw>
+        <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+        <PartText x="4" y="44" width="84" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+            </Font>
+          </Text>
+        </PartText>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="c" x="0" y="0" width="92" height="92">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+        <PartDraw x="0" y="0" width="92" height="92">
+          <Ellipse x="1" y="1" width="90" height="90">
+            <Fill color="#AA050010" />
+            <Stroke color="#40FFFFFF" thickness="2" />
+          </Ellipse>
+          <Arc centerX="46" centerY="46" width="88" height="88" startAngle="0" endAngle="0">
+            <Transform target="endAngle"
+                value="clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN]) / ([COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]), 0, 1) * 360" />
+            <Stroke color="[CONFIGURATION.themeColor.1]" thickness="4" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+        <PartImage x="34" y="14" width="24" height="24" tintColor="[CONFIGURATION.themeColor.0]">
+          <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+        </PartImage>
+        <PartText x="4" y="44" width="84" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="orbitron_medium" size="22" color="#FFFFFFFF">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" /></Template>
+            </Font>
+          </Text>
+        </PartText>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
 
     <!-- ===== Always-on (ambient) mode: black background, low pixel count ===== -->
     <Group name="ambient" x="0" y="0" width="450" height="450" alpha="0">
