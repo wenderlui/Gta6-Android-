@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Neon Beach</string>
+    <string name="publisher" translatable="false">wenderlui</string>
+
+    <string name="cfg_background">Cenário</string>
+    <string name="cfg_background_sunset">Pôr do sol</string>
+    <string name="cfg_background_night">Noite</string>
+
+    <string name="cfg_color">Cor</string>
+    <string name="cfg_color_pink">Rosa neon</string>
+    <string name="cfg_color_cyan">Ciano</string>
+    <string name="cfg_color_gold">Dourado</string>
+    <string name="cfg_color_white">Branco</string>
+    <string name="cfg_color_green">Verde neon</string>
+
+    <string name="cfg_seconds">Anel de segundos</string>
+</resources>
