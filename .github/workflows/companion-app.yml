@@ -52,8 +52,12 @@ jobs:
 
   screenshots:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: neonguia-debug-apk
@@ -73,11 +77,17 @@ jobs:
           disable-animations: true
           script: |
             adb install -r apk/*.apk
-            mkdir -p shots
+            mkdir -p play-store/capturas
             adb shell settings put system time_12_24 24
             adb shell cmd uimode night yes
-            for t in 0 1 2 3 4; do adb shell am start -S -W -n com.wenderlui.neonguia/.MainActivity --ei tab $t; sleep 6; adb exec-out screencap -p > shots/tela-$t.png; done
+            for t in 0 1 2 3 4; do adb shell am start -S -W -n com.wenderlui.neonguia/.MainActivity --ei tab $t; sleep 6; adb exec-out screencap -p > play-store/capturas/tela-$t.png; done
       - uses: actions/upload-artifact@v4
         with:
           name: neonguia-screenshots
-          path: shots/*.png
+          path: play-store/capturas/*.png
+      - name: Salvar capturas no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add play-store/capturas
+          git diff --cached --quiet || (git commit -m "Atualiza capturas de tela da Play Store" && git push)
